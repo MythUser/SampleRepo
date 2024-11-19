@@ -20,7 +20,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'corretto'
-          cache: 'maven'
+          cache: maven
 
       - name: Install Chrome
         run: sudo apt-get install google-chrome-stable
