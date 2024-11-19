@@ -17,11 +17,20 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'temurin'
+          distribution: 'corretto'
           cache: maven
+
+      - name: Install Chrome
+        run: sudo apt-get install google-chrome-stable
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+
+      - name: Maven test
+        run: mvn test
+
+        env:
+         CI_RUN: true
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       - name: Update dependency graph
