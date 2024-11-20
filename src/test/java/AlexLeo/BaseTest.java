@@ -15,7 +15,7 @@ public class BaseTest {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp(){
+    public void newDriver(){
         driver = new ChromeDriver();
         driver.get("https://askomdch.com/");
         driver.manage().window().maximize();
@@ -23,7 +23,7 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public void createDriver() {
+    public void setUp() {
         // Устанавливаем драйвер с помощью WebDriverManager
         WebDriverManager.chromedriver().setup();
         // Получаем параметры Chrome из переменной окружения
