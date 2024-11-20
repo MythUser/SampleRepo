@@ -1,8 +1,11 @@
 package AlexLeo;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
@@ -18,6 +21,21 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
     }
+
+    @BeforeClass
+    public void createDriver() {
+        // Устанавливаем драйвер с помощью WebDriverManager
+        WebDriverManager.chromedriver().setup();
+        // Получаем параметры Chrome из переменной окружения
+        ChromeOptions options = new ChromeOptions();
+        String chromeOpts = System.getenv("CHROME_OPTS");
+        if (chromeOpts != null) {
+            options.addArguments(chromeOpts.split(" "));
+        }
+        // Запускаем Chrome с указанными параметрами
+        driver = new ChromeDriver(options);
+    }
+
 
     @AfterMethod
     public void tearDown(){
