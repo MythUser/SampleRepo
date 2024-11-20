@@ -14,13 +14,13 @@ public class BaseTest {
 
     WebDriver driver;
 
-//    @BeforeMethod
-//    public void newDriver(){
-//        driver = new ChromeDriver();
-//        driver.get("https://askomdch.com/");
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-//    }
+    @BeforeMethod
+    public void newDriver(){
+        driver = new ChromeDriver();
+        driver.get("https://askomdch.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+    }
 
     @BeforeClass
     public void setUp() {
