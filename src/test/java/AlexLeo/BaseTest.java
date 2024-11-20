@@ -32,7 +32,6 @@ public class BaseTest {
         if (chromeOpts != null) {
             options.addArguments(chromeOpts.split(" "));
         }
-        // Запускаем Chrome с указанными параметрами
         driver = new ChromeDriver(options);
     }
 
