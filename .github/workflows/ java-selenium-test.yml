@@ -22,5 +22,6 @@ jobs:
       - name: Set Chrome options for CI
         run: |
           echo "CHROME_OPTS=--headless --no-sandbox --disable-dev-shm-usage" >> $GITHUB_ENV
+
       - name: Run Tests
         run: mvn test
