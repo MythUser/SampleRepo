@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite">
+    <test name="Test with Browser">
+        <parameter name="browser" value="firefox"/> <!-- Optional -->
+        <classes>
+            <class name="AlexLeo.PracticeTest"/>
+        </classes>
+    </test>
+</suite>
