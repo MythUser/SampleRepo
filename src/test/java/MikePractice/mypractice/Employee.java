@@ -1,4 +1,4 @@
-package AlexLeo.mypractice;
+package MikePractice.mypractice;
 
 public class Employee {
 

@@ -1,4 +1,4 @@
-package AlexLeo.mypractice;
+package MikePractice.mypractice;
 
 public class Manager extends Employee {
     Manager(String firstName1, String lastName1, String title1, double salary1, double workingYears1, String country1) {

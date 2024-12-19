@@ -1,4 +1,4 @@
-package AlexLeo.mypractice;
+package MikePractice.mypractice;
 
 public class DeliveryManager extends Manager{
     DeliveryManager(String firstName1, String lastName1, String title1, double salary1, double workingYears1, String country1) {
