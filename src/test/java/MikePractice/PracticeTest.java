@@ -1,4 +1,4 @@
-package AlexLeo;
+package MikePractice;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
